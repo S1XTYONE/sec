@@ -1,0 +1,49 @@
+
+
+    <!-- Page Content -->
+    <div class="container">
+           {% for work in works %}
+            <!-- Portfolio Item Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        {{work.title}}
+                    </h1>
+                </div>
+            </div>
+            <!-- /.row -->
+            <!-- Portfolio Item Row -->
+            <div class="row">
+
+                <div class="col-md-8">
+                    <img class="img-responsive" src="{{work.thumb}}" alt="">
+                </div>
+
+                <div class="col-md-4">
+                    <h4>Project Description</h4>
+                    <p>{{work.description}}</h3>
+                    <ul>
+                        <li><b>Price:</b> {{work.price}}</li>
+                        <li><b>Design:</b> {{work.hard}}</li>
+                        <li><b>Time:</b> {{work.time}}</li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; Your Website 2014</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
+            {% endfor %}
+    </div>
+    <!-- /.container -->
+{% include 'footer.html' %}
